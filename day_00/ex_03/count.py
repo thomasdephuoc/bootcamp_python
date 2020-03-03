@@ -1,4 +1,4 @@
-def text_analyzer(text): 
+def text_analyzer(text=None): 
     if text is None:
         text = input("What is the text to analyse?")
 
