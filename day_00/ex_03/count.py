@@ -1,4 +1,5 @@
 def text_analyzer(text=None): 
+    """This function counts the number of upper characters, lower characters, punctuation and spaces in a given text."""
     if text is None:
         text = input("What is the text to analyse?")
 
