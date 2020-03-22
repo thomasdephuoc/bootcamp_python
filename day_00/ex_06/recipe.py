@@ -34,16 +34,21 @@ while user_input != 5:
     user_input = int(input("Please select an option by typing the corresponding number:\n1: Add a recipe\n2: Delete a recipe\n3: Print a recipe\n4: Print the cookbook\n5: Quit\n"))
     if user_input == 1:
         recipe_input = parser.parse_args()
+        print("\n")
         add_recipe(recipe_input.recipe_name, recipe_input.ingredients, recipe_input.meal_type, recipe_input.preparation.time)
     elif user_input == 2:
-        recipe_input = input("Please add your recipe name, ingredients, meal type and preparation time")
-        add_recipe(recipe_input)
+        recipe_input = input("Please enter the recipe name to delete")
+        print("\n")
+        del_recipe(recipe_input)
     elif user_input == 3:
         recipe_input = input("Please enter the recipe's name to get its details:")
+        print("\n")
         print_recipe(recipe_input)
     elif user_input == 4:
+        print("\n")
         print_cookbook()
     elif user_input == 5:
+        print("\n")
         print("Cookbook closed.")
     else:
         user_input = int(input("This option does not exist, please type the corresponding number.\nTo exit, enter 5."))
